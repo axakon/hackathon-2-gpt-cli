@@ -3,7 +3,7 @@ The challenge is to use chatgpt to take some human readable text, translate it t
 The boilerplate code allows you to run `npm run gpt-cli <prompt>`.
 Edit the function in `./src/index.ts` to add your own behaviour. 
 
-# Example of how your program should work when complete:
+# Required behaviour:
 - User runs `npm run gpt-cli "create a folder name projects"`.
 - Your program outputs `Do you want to run "mkdir projects" Y/n? `
 - `mkdir project` is executed if users anwsers `Y`.
