@@ -2,8 +2,12 @@
 The challenge is to use chatgpt to take some human readable text, translate it to a terminal command and then execute it.
 
 ## Setup
-- Install dependencies with `npm i`.
-- Run script withj `npm run gpt-cli "test prompt"`.
+1. Create .env file and add Open AI API key, ask someone in the knowledge team for a key.
+```
+OPEN_AI_API_KEY=<key>
+```
+2. Install dependencies with `npm i`.
+3. Run script with `npm run gpt-cli "test prompt"`.
 
 ## Steps to complete the challenge
 
