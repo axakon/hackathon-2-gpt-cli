@@ -1,7 +1,8 @@
 import { createOpenAiClient } from "./lib/openai";
 import promptSync from "prompt-sync";
-import { exec } from "child_process"
+import { execSync } from "child_process"
 
+// Use this to read input from the user.
 const prompt = promptSync();
 
 // Create a openai API client.
@@ -10,18 +11,23 @@ const openAiClient = createOpenAiClient()
 export default async function gptCli(userInput: string) {
   /**
    * YOUR CODE HERE.
-   * Example how to use openAiClient below.
    */
-  const response = await openAiClient.chat.completions.create({
+
+  // Example how to use openAiClient:
+  const responseObject = await openAiClient.chat.completions.create({
     model: "gpt-3.5-turbo",
     messages: [
-      { role: "user", content: "Name a random animal." }
+      { role: "user", content: userInput }
     ]
   })
 
-  const responseMessage = response.choices[0]?.message.content;
+  const responseFromChatGpt = responseObject.choices[0]?.message.content;
 
-  console.log(responseMessage)
+  if(!responseFromChatGpt) {
+    throw new Error("Got not response from")
+  }
+
+  console.log(responseFromChatGpt)
 }
 
 
