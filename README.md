@@ -1,7 +1,5 @@
 # Challenge: GPT CLI
 The challenge is to use chatgpt to take some human readable text, translate it to a terminal command and then execute it.
-The boilerplate code allows you to run `npm run gpt-cli <prompt>`.
-Edit the function in `./src/index.ts` to add your own behaviour. 
 
 ## Setup
 - Install dependencies with `npm i`.
